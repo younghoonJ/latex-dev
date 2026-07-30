@@ -55,13 +55,20 @@ make copy-settings
 ## 템플릿 사용
 
 ```bash
-cp -a template ~/papers/my-paper
+./scripts/init-paper.sh ~/papers/my-paper --git --open
 cd ~/papers/my-paper
 make pdf
-code .
 ```
 
 생성 PDF는 `build/main.pdf`에 있습니다.
+
+Makefile을 통해서도 새 논문 프로젝트를 만들 수 있습니다.
+
+```bash
+make init-paper TARGET=~/papers/my-paper GIT=1 OPEN=1
+```
+
+대상 경로가 이미 있으면 덮어쓰지 않고 실패합니다. VS Code 워크스페이스 설정도 새 프로젝트의 `.vscode/settings.json`으로 함께 복사됩니다.
 
 ## 검증
 
