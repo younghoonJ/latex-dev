@@ -34,5 +34,6 @@
   },
   "editor.wordWrap": "on",
   "editor.rulers": [100],
-  "cSpell.language": "en,ko"
+  "cSpell.language": "en,ko",
+  "makefile.configureOnOpen": false
 }
