@@ -1,0 +1,38 @@
+{
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.synctex.afterBuild.enabled": true,
+  "latex-workshop.latex.clean.enabled": true,
+  "latex-workshop.intellisense.package.enabled": true,
+  "latex-workshop.message.error.show": true,
+  "latex-workshop.message.warning.show": false,
+  "latex-workshop.latex.outDir": "%DIR%/build",
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "latexmk (pdfLaTeX)",
+      "tools": ["latexmk-pdf"]
+    },
+    {
+      "name": "latexmk (LuaLaTeX)",
+      "tools": ["latexmk-lua"]
+    }
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk-pdf",
+      "command": "latexmk",
+      "args": ["-synctex=1", "-interaction=nonstopmode", "-file-line-error", "-pdf", "-outdir=%OUTDIR%", "%DOC%"]
+    },
+    {
+      "name": "latexmk-lua",
+      "command": "latexmk",
+      "args": ["-synctex=1", "-interaction=nonstopmode", "-file-line-error", "-lualatex", "-outdir=%OUTDIR%", "%DOC%"]
+    }
+  ],
+  "files.exclude": {
+    "**/build": true
+  },
+  "editor.wordWrap": "on",
+  "editor.rulers": [100],
+  "cSpell.language": "en,ko"
+}

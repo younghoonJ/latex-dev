@@ -1,0 +1,11 @@
+# 필수
+James-Yu.latex-workshop
+
+# 추천
+eamodio.gitlens
+usernamehw.errorlens
+streetsidesoftware.code-spell-checker
+streetsidesoftware.code-spell-checker-korean
+DavidAnson.vscode-markdownlint
+ms-python.python
+ms-python.vscode-pylance
