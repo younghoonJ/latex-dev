@@ -29,10 +29,11 @@ else
     texlive-latex-base texlive-latex-recommended texlive-latex-extra \
     texlive-fonts-recommended texlive-fonts-extra texlive-science \
     texlive-pictures texlive-bibtex-extra texlive-lang-korean \
+    texlive-xetex texlive-luatex \
     latexmk biber chktex latexindent
 fi
 $SUDO DEBIAN_FRONTEND=noninteractive apt-get install -y \
-  latexmk biber chktex latexindent ghostscript poppler-utils
+  ghostscript poppler-utils
 
 if [[ "$INSTALL_GUI_TOOLS" == "1" ]]; then
   log "그림·PDF GUI 도구 설치"
