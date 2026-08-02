@@ -16,7 +16,7 @@ else
     texlive-latex-base texlive-latex-recommended texlive-latex-extra \
     texlive-fonts-recommended texlive-fonts-extra texlive-science \
     texlive-pictures texlive-bibtex-extra texlive-lang-korean \
-    texlive-xetex texlive-luatex \
+    texlive-xetex texlive-luatex texlive-extra-utils \
     latexmk biber chktex 
 fi
 

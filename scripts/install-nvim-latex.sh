@@ -146,6 +146,16 @@ map("n", "<C-k>", "<C-w>k", { desc = "Move to upper window" })
 map("n", "<C-l>", "<C-w>l", { desc = "Move to right window" })
 map({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 map({ "n", "x" }, "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
+
+-- Bufferline navigation
+-- Note: in many terminals, <Tab> and <C-i> are the same key code.
+map("n", "<Tab>", "<cmd>BufferLineCycleNext<cr>", { desc = "Next buffer", silent = true })
+map("n", "<S-Tab>", "<cmd>BufferLineCyclePrev<cr>", { desc = "Previous buffer", silent = true })
+map("n", "]b", "<cmd>BufferLineCycleNext<cr>", { desc = "Next buffer", silent = true })
+map("n", "[b", "<cmd>BufferLineCyclePrev<cr>", { desc = "Previous buffer", silent = true })
+map("n", "<leader>bd", "<cmd>bdelete<cr>", { desc = "Delete buffer", silent = true })
+map("n", "<leader>bo", "<cmd>BufferLineCloseOthers<cr>", { desc = "Close other buffers", silent = true })
+map("n", "<leader>bp", "<cmd>BufferLineTogglePin<cr>", { desc = "Pin/unpin buffer", silent = true })
 EOF_KEYMAPS
 
   cat > "$config_dir/lua/config/lazy.lua" <<'EOF_LAZY'
