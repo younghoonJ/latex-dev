@@ -17,8 +17,12 @@ else
     texlive-fonts-recommended texlive-fonts-extra texlive-science \
     texlive-pictures texlive-bibtex-extra texlive-lang-korean \
     texlive-xetex texlive-luatex \
-    latexmk biber chktex latexindent
+    latexmk biber chktex 
 fi
 
 apt_install ghostscript poppler-utils
+
+command -v latexindent >/dev/null \
+  || die "latexindent 설치 확인 실패"
+
 ok "LaTeX 도구 설치 완료"
