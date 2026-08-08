@@ -241,7 +241,10 @@ return {
     event = { "InsertEnter", "CmdlineEnter" },
     dependencies = { "rafamadriz/friendly-snippets" },
     opts = {
-      keymap = { preset = "default" },
+      keymap = {
+        preset = "default",
+        ["<CR>"] = { "accept", "fallback" },
+      },
       completion = {
         documentation = { auto_show = true, auto_show_delay_ms = 250 },
         menu = { border = "rounded" },
