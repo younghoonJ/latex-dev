@@ -191,14 +191,13 @@ EOF_LAZY
 return {
   {
     "lervag/vimtex",
-    tag = "v2.17",
+    tag = "v2.18",
     lazy = false,
     init = function()
       vim.g.vimtex_compiler_method = "latexmk"
       vim.g.vimtex_view_method = "general"
       vim.g.vimtex_view_general_viewer = "okular"
       vim.g.vimtex_view_general_options = [[--unique file:@pdf\#src:@line@tex]]
-      vim.g.vimtex_view_general_options_latexmk = [[--unique]]
       vim.g.vimtex_quickfix_open_on_warning = 0
       vim.g.vimtex_quickfix_mode = 2
       vim.g.vimtex_fold_enabled = 0
