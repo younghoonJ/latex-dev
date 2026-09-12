@@ -1,0 +1,5 @@
+# Local source bundles used to assemble the cross-platform Neovim setup.
+/latex-dev-crossplatform-nvim-v*.zip
+/latex-dev-crossplatform-nvim-v*/
+/latex-inverse-search-fix-v*.zip
+/latex-inverse-search-fix-v*/
