@@ -1,6 +1,6 @@
-# Ubuntu LaTeX Development Bootstrap
+# Cross-platform LaTeX Development Bootstrap
 
-Ubuntu에서 수학 논문 작성 환경을 반복 설치하기 위한 저장소입니다. 설치 단위는 공통 도구, TeX 도구, PDF viewer/GUI 도구, 편집기 설정으로 나뉩니다.
+Ubuntu와 Windows에서 수학 논문 작성 환경을 반복 설치하기 위한 저장소입니다. Ubuntu는 전체 도구 설치를 지원하고, Windows는 MiKTeX를 기반으로 Neovim/VimTeX 환경을 구성합니다.
 
 ## 포함 내용
 
@@ -11,10 +11,12 @@ Ubuntu에서 수학 논문 작성 환경을 반복 설치하기 위한 저장소
 - VS Code 공식 APT 저장소 및 `code` 설치(선택)
 - VS Code LaTeX Workshop 확장 및 추천 확장 설치
 - Neovim, VimTeX, TexLab, lazy.nvim 기반 설정(선택)
+- Ubuntu와 Windows가 공유하는 `nvim/` 설정
+- Windows용 SumatraPDF forward/inverse SyncTeX
 - `biblatex`/Biber 기반 수학 논문 템플릿
 - 설치 검증 스크립트
 
-## 빠른 시작
+## Ubuntu 빠른 시작
 
 기본 설치는 기존처럼 VS Code 중심 환경입니다. VS Code 앱 자체는 기본 설치하지 않고, 이미 `code`가 있으면 확장만 설치합니다.
 
@@ -26,6 +28,17 @@ make install
 ```
 
 스크립트는 같은 머신에서 다시 실행해도 되도록 작성했습니다. APT와 VS Code 확장 설치는 이미 설치된 항목을 재사용·갱신합니다.
+
+## Windows 빠른 시작
+
+MiKTeX를 먼저 설치한 뒤 저장소 루트의 `install-windows.cmd`를 실행하세요. 설치기는 필요한 Git, Neovim, ripgrep, Strawberry Perl, SumatraPDF를 `winget`으로 설치하고 `%LOCALAPPDATA%\nvim`에 공통 설정을 복사합니다.
+
+```powershell
+.\scripts\install-nvim-latex.ps1 -InstallDependencies
+.\scripts\verify-windows.ps1
+```
+
+자세한 설치 방법과 SumatraPDF SyncTeX 설정은 [WINDOWS_SETUP.md](WINDOWS_SETUP.md)를 참고하세요.
 
 ## Makefile 설치 타깃
 
